@@ -1,6 +1,6 @@
 export {default as Navbar} from "./Navbar/Navbar.component"
 export {default as News} from "./News/News.component"
-export {default as Home} from "./Home/Home.componsnt"
+export {default as Home} from "./Home/Home.component"
 export {default as Cryptocurrencies} from "./Cryptocurrencies/Cryptocurrencies.component"
 export {default as CryptoDetail} from "./CryptoDetail/CryptoDetail.componsnt"
 export {default as Exchanges} from "./Exchanges/Exchanges.component"

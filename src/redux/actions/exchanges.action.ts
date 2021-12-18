@@ -21,7 +21,7 @@ export function* handleGetExchanges(): any {
     try {
         const response = yield call(api.getExchanges)
         const {exchanges} = response.data.data
-        yield put(setExchanges(exchanges))
+        yield  put(setExchanges(exchanges))
     } catch (err) {
         yield put(setError(err))
     }

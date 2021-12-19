@@ -1,8 +1,10 @@
 import {combineReducers} from "redux";
 import {exchangesReducer} from "./exchanges.reducer";
-import {marketReducer} from "./markets.reducer";
+import {marketsReducer} from "./markets.reducer";
+import {coinsReducer} from "./coins.reducer";
 
 export const RootReducer = combineReducers({
     exchange: exchangesReducer,
-    market: marketReducer
+    market: marketsReducer,
+    coin: coinsReducer
 })

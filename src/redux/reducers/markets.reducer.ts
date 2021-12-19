@@ -7,7 +7,7 @@ const initialState: MarketsInitialStateInterface = {
     error: ""
 }
 
-export const marketReducer = (state = initialState, action: MarketsActionInterface) => {
+export const marketsReducer = (state = initialState, action: MarketsActionInterface) => {
     const {GET_MARKETS_SUCCESSFUL, GET_MARKETS_FAILURE, GET_MARKETS} = MARKETS_TYPES
     switch (action.type) {
         case GET_MARKETS:

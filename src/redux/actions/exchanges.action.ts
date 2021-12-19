@@ -1,19 +1,19 @@
 import {call, put} from "redux-saga/effects"
-import * as types from "../types"
+import {EXCHANGES_TYPES} from "../types"
 import * as api from "../../api/api"
 import {ExchangesInterface} from "../../interfaces/exchanges.interface";
 
 
-export const getExchanges = () => ({type: types.EXCHANGES_TYPES.GET_EXCHANGES})
+export const getExchanges = () => ({type: EXCHANGES_TYPES.GET_EXCHANGES})
 
 export const setExchanges = (exchanges: ExchangesInterface) => ({
-    type: types.EXCHANGES_TYPES.GET_EXCHANGES_SUCCESSFUL,
+    type: EXCHANGES_TYPES.GET_EXCHANGES_SUCCESSFUL,
     data: exchanges
 })
 
 
 export const setError = (err: any) => ({
-    type: types.EXCHANGES_TYPES.GET_EXCHANGES_FAILURE,
+    type: EXCHANGES_TYPES.GET_EXCHANGES_FAILURE,
     data: err
 })
 

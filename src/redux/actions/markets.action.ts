@@ -1,6 +1,6 @@
 import * as types from "../types"
 import {call, put} from "redux-saga/effects";
-import * as api from "../../apis/markets.api"
+import * as api from "../../api/api"
 
 
 export const getMarkets = () => ({

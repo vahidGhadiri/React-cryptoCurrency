@@ -1,6 +1,6 @@
 import {call, put} from "redux-saga/effects"
 import * as types from "../types"
-import * as api from "../../apis/exchanges.api"
+import * as api from "../../api/api"
 import {ExchangesInterface} from "../../interfaces/exchanges.interface";
 
 

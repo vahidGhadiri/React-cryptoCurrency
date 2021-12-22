@@ -2,7 +2,7 @@ import BaseApi from "../base";
 
 class MarketsServiceProvider extends BaseApi {
     constructor() {
-        super('');
+        super();
     }
 
     public getMarkets() {
@@ -10,4 +10,6 @@ class MarketsServiceProvider extends BaseApi {
     }
 }
 
-export default MarketsServiceProvider
+const marketsService = new MarketsServiceProvider()
+
+export default marketsService

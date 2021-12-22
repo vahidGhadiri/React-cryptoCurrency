@@ -4,7 +4,7 @@ import {GET_COIN, GET_COINS} from "../../configs/urls";
 
 class CoinsServiceProvider extends BaseApi {
     constructor() {
-        super('');
+        super();
     }
 
     public geCoins() {
@@ -16,4 +16,6 @@ class CoinsServiceProvider extends BaseApi {
     }
 }
 
-export default CoinsServiceProvider
+const coinsService = new CoinsServiceProvider()
+
+export default coinsService

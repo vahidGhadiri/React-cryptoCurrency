@@ -1,7 +1,7 @@
 import {COINS_TYPES} from "../types";
 import {CoinInterface} from "../../interfaces/coins.interface";
-import * as api from "../../api/api"
 import {call, put} from "redux-saga/effects";
+import coinsService from "../../api/endpoints/coins";
 
 
 export const getCoins = () => ({type: COINS_TYPES.GET_COINS})
@@ -24,7 +24,7 @@ const setError = (error: any) => ({
 
 export function* handleGetCoins(): any {
     try {
-        const response = yield call(api.getCoins)
+        const response = yield call(coinsService.geCoins)
         const {coins} = response.data.data
         yield put(setCoins(coins))
     } catch (error: any) {
@@ -35,7 +35,7 @@ export function* handleGetCoins(): any {
 
 export function* handleGetCoin(): any {
     try {
-        const response = yield call(api.getCoin)
+        const response = yield call(() => coinsService.geCoins())
         const {coin} = response.data.data
         yield put(coin)
     } catch (error: any) {

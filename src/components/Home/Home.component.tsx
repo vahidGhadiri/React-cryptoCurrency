@@ -11,8 +11,7 @@ const Home: React.FC<any> = (props): JSX.Element => {
     return (
         <>
             <Typography.Title level={2} className="heading ">Global Crypto Stats</Typography.Title>
-            <button onClick={() => props.getCoins()}>GET COINS</button>
-            <button onClick={() => props.getCoin()}>GET COIN</button>
+            <button onClick={() => props.getExchanges()}>GET COINS</button>
             <Row>
                 <Col span={12}><Statistic title="Total Cryptocurrencies" value={5}/></Col>
                 <Col span={12}><Statistic title="Total Exchanges " value={5}/></Col>

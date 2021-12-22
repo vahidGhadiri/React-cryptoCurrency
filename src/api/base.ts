@@ -5,9 +5,9 @@ import {toast} from "react-toastify";
 abstract class BaseApi {
     protected httpServices: AxiosInstance
 
-    protected constructor(suffix: string) {
+    protected constructor() {
         this.httpServices = axios.create({
-            baseURL: `"https://coinranking1.p.rapidapi.com"/${suffix ? suffix : ""}`,
+            baseURL: "https://coinranking1.p.rapidapi.com",
             timeout: 10000,
             headers: {
                 'x-rapidapi-host': 'coinranking1.p.rapidapi.com',

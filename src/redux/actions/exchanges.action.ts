@@ -1,7 +1,7 @@
 import {call, put} from "redux-saga/effects"
 import {EXCHANGES_TYPES} from "../types"
-import * as api from "../../api/api"
 import {ExchangesInterface} from "../../interfaces/exchanges.interface";
+import exchangeService from "../../api/endpoints/exchanges";
 
 
 export const getExchanges = () => ({
@@ -21,7 +21,7 @@ export const setError = (err: any) => ({
 
 export function* handleGetExchanges(): any {
     try {
-        const response = yield call(api.getExchanges)
+        const response = yield call(() => exchangeService.getExchanges())
         const {exchanges} = response.data.data
         yield  put(setExchanges(exchanges))
     } catch (err) {

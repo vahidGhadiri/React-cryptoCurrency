@@ -1,6 +1,6 @@
 import * as types from "../types"
 import {call, put} from "redux-saga/effects";
-import * as api from "../../api/api"
+import marketsService from "../../api/endpoints/markets";
 
 
 export const getMarkets = () => ({
@@ -19,7 +19,7 @@ const setError = (err: any) => ({
 
 export function* handleGetMarkets(): any {
     try {
-        const response = yield call(api.getMarkets)
+        const response = yield call(marketsService.getMarkets)
         const {markets} = response.data.data
         yield put(setMarkets(markets))
     } catch (error) {

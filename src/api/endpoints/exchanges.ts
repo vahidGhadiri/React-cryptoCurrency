@@ -2,7 +2,7 @@ import BaseApi from "../base";
 
 class ExchangesServiceProvider extends BaseApi {
     constructor() {
-        super('');
+        super();
     }
 
     public getExchanges() {
@@ -10,4 +10,6 @@ class ExchangesServiceProvider extends BaseApi {
     }
 }
 
-export default ExchangesServiceProvider
+const exchangeService = new ExchangesServiceProvider()
+
+export default exchangeService

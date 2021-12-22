@@ -1,4 +1,4 @@
-export interface CoinsInterface {
+export interface CoinInterface {
     "id": number
     "uuid": string
     "slug": string
@@ -34,15 +34,16 @@ export interface CoinsInterface {
 }
 
 export interface CoinsInitialStateInterface {
-    coins: Array<CoinsInterface>
+    coins: Array<CoinInterface>
+    coin: {} | CoinInterface
     isLoading: boolean
     error: string
 }
 
 interface NameInterface {
-    name: string
-    type: string
-    url: string
+    "name": string
+    "type": string
+    "url": string
 }
 
 export interface CoinsActionInterface {

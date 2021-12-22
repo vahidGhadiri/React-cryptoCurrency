@@ -4,7 +4,9 @@ import * as api from "../../api/api"
 import {ExchangesInterface} from "../../interfaces/exchanges.interface";
 
 
-export const getExchanges = () => ({type: EXCHANGES_TYPES.GET_EXCHANGES})
+export const getExchanges = () => ({
+    type: EXCHANGES_TYPES.GET_EXCHANGES
+})
 
 export const setExchanges = (exchanges: ExchangesInterface) => ({
     type: EXCHANGES_TYPES.GET_EXCHANGES_SUCCESSFUL,

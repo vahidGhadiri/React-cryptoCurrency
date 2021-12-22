@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {Col, Row, Statistic, Typography} from "antd";
 
 import {getExchanges} from "../../redux/actions/exchanges.action";
-import {getCoins} from "../../redux/actions/coins.action";
+import {getCoin, getCoins} from "../../redux/actions/coins.action";
 import {StoreInterface} from "../../redux/store/store";
 
 
@@ -11,7 +11,8 @@ const Home: React.FC<any> = (props): JSX.Element => {
     return (
         <>
             <Typography.Title level={2} className="heading ">Global Crypto Stats</Typography.Title>
-            <button onClick={() => props.getCoins()}>CALL THE API</button>
+            <button onClick={() => props.getCoins()}>GET COINS</button>
+            <button onClick={() => props.getCoin()}>GET COIN</button>
             <Row>
                 <Col span={12}><Statistic title="Total Cryptocurrencies" value={5}/></Col>
                 <Col span={12}><Statistic title="Total Exchanges " value={5}/></Col>
@@ -30,7 +31,8 @@ const mapStateToProps = (state: StoreInterface) => ({
 
 const mapDispatchToProps = (dispatch: any) => ({
     getExchanges: () => dispatch(getExchanges()),
-    getCoins: () => dispatch(getCoins())
+    getCoins: () => dispatch(getCoins()),
+    getCoin: () => dispatch(getCoin())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

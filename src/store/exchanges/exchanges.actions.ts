@@ -1,6 +1,5 @@
 import * as types from "./exchanges.constant"
-import {ExchangesInterface} from "../../interfaces/exchanges.interface";
-import {AxiosError} from "axios";
+import {ExchangesInterface} from "../../types/exchanges.type";
 
 
 class Actions {
@@ -9,18 +8,17 @@ class Actions {
             type: types.GET_EXCHANGES,
         }
     }
-
     public setExchanges(exchanges: ExchangesInterface) {
         return {
-            type: types.GET_EXCHANGES_SUCCESSFUL,
+            type: types.SET_EXCHANGES,
             data: exchanges
         }
     }
 
-    public setErr(err: AxiosError) {
+    public setLoading(loading: boolean) {
         return {
-            type: types.GET_EXCHANGES_FAILURE,
-            data: err
+            type: types.SET_LOADING,
+            data: loading
         }
     }
 }

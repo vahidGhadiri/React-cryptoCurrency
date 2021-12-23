@@ -1,26 +1,25 @@
 import * as types from "./markets.constant"
-import {MarketsInterface} from "../../interfaces/markets.interface";
-import {AxiosError} from "axios";
+import {MarketsType} from "../../types/markets.type";
+
 
 class Actions {
-
     public getMarkets() {
         return {
             type: types.GET_MARKETS
         }
     }
 
-    public setMarkets(markets: MarketsInterface) {
+    public setMarkets(markets: MarketsType) {
         return {
-            type: types.GET_MARKETS_SUCCESSFUL,
+            type: types.SET_MARKETS,
             data: markets
         }
     }
 
-    public setErr(err: AxiosError) {
+    public setLoading(loading: boolean) {
         return {
-            type: types.GET_MARKETS_FAILURE,
-            data: err
+            type: types.SET_LOADING,
+            data: loading
         }
     }
 }

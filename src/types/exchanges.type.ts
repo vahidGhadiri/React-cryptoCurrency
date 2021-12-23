@@ -17,7 +17,6 @@ export interface ExchangesInterface {
 export interface ExchangesInitialStateInterface {
     exchanges: Array<ExchangesInterface>
     isLoading: boolean
-    error: string
 }
 
 export interface ExchangesActionInterface {

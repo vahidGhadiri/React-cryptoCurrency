@@ -1,6 +1,5 @@
 import * as types from "./coins.constant"
-import {CoinInterface} from "../../interfaces/coins.interface";
-import {AxiosError} from "axios";
+import {CoinInterface} from "../../types/coins.type";
 
 class Actions {
     public getCoins() {
@@ -11,15 +10,15 @@ class Actions {
 
     public setCoins(coins: CoinInterface) {
         return {
-            type: types.GET_COINS_SUCCESSFUL,
+            type: types.SET_COINS,
             data: coins
         }
     }
 
-    public setError(err: AxiosError) {
+    public setLoading(loading: boolean) {
         return {
-            type: types.GET_COINS_FAILURE,
-            data: err
+            type: "",
+            data: loading
         }
     }
 }

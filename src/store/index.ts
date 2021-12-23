@@ -1,9 +1,9 @@
 import {applyMiddleware, compose, createStore} from "redux";
 import createSagaMiddleware from "redux-saga";
-import {MarketsInitialStateInterface} from "../interfaces/markets.interface";
-import {ExchangesInitialStateInterface} from "../interfaces/exchanges.interface";
+import {MarketsInitialStateInterface} from "../types/markets.type";
+import {ExchangesInitialStateInterface} from "../types/exchanges.type";
 import {RootReducer} from "./index.reducer";
-import {CoinsInitialStateInterface} from "../interfaces/coins.interface";
+import {CoinsInitialStateInterface} from "../types/coins.type";
 import RootSaga from "./index.saga";
 
 

@@ -2,11 +2,11 @@ import BaseApi from "../base";
 
 class ExchangesServiceProvider extends BaseApi {
     constructor() {
-        super();
+        super("exchanges");
     }
 
     public getExchanges() {
-        return this.httpServices.get("exchanges")
+        return this.httpServices.get("")
     }
 }
 

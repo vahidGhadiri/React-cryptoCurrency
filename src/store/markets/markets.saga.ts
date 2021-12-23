@@ -5,12 +5,13 @@ import {GET_MARKETS} from "./markets.constant";
 
 
 export function* getMarkets(): any {
+    yield put(marketsActions.setLoading(true))
     try {
         const response = yield call(marketsActions.getMarkets)
         const {markets} = response.data.data
         yield put(marketsActions.setMarkets(markets))
-    } catch (error: any) {
-        yield put(marketsActions.setErr(error))
+    } finally {
+        yield put(marketsActions.setLoading(false))
     }
 }
 

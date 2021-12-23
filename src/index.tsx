@@ -5,14 +5,14 @@ import {Provider} from "react-redux";
 import {ToastContainer} from "react-toastify";
 
 import App from "./App";
-import {store} from "./redux/store/store";
+import {index} from "./store";
 
 import 'react-toastify/dist/ReactToastify.css';
 import "antd/dist/antd.css"
 
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={index}>
         <Router>
             <App/>
             <ToastContainer/>

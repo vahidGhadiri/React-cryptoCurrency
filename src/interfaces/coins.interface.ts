@@ -35,7 +35,6 @@ export interface CoinInterface {
 
 export interface CoinsInitialStateInterface {
     coins: Array<CoinInterface>
-    coin: {} | CoinInterface
     isLoading: boolean
     error: string
 }

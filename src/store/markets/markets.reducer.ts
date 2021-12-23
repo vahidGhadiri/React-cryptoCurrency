@@ -1,5 +1,5 @@
-import {MARKETS_TYPES} from "../types";
 import {MarketsActionInterface, MarketsInitialStateInterface} from "../../interfaces/markets.interface";
+import {GET_MARKETS, GET_MARKETS_FAILURE, GET_MARKETS_SUCCESSFUL} from "./markets.constant";
 
 const initialState: MarketsInitialStateInterface = {
     markets: [],
@@ -8,14 +8,14 @@ const initialState: MarketsInitialStateInterface = {
 }
 
 export const marketsReducer = (state = initialState, action: MarketsActionInterface) => {
-    const {GET_MARKETS_SUCCESSFUL, GET_MARKETS_FAILURE, GET_MARKETS} = MARKETS_TYPES
-    switch (action.type) {
+    const {data, type} = action
+    switch (type) {
         case GET_MARKETS:
             return {...state, isLoading: true}
         case GET_MARKETS_SUCCESSFUL:
-            return {...state, markets: action.data, isLoading: false}
+            return {...state, markets: data, isLoading: false}
         case GET_MARKETS_FAILURE:
-            return {...state, error: action.data, isLoading: false}
+            return {...state, error: data, isLoading: false}
         default:
             return state
     }

@@ -35,6 +35,8 @@ export interface CoinInterface {
 
 export interface CoinsInitialStateInterface {
     coins: Array<CoinInterface>
+    coin: CoinInterface | {}
+    coinHistory: Array<string>
     isLoading: boolean
 }
 

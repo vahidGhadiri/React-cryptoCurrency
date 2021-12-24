@@ -11,8 +11,15 @@ class CoinsServiceProvider extends BaseApi {
         return this.httpServices.get(urls.GET_COINS)
     }
 
-    public getCoin(id: string): any {
+    public getCoin(id: string) {
         return this.httpServices.get(urls.GET_COIN.replace('{id}', id))
+    }
+
+    public getCoinHistory(id: string, timeFrame: string) {
+        return this.httpServices.get(urls.GET_COIN_HISTORY
+            .replace("{id}", id)
+            .replace("{timeFrame}", timeFrame)
+        )
     }
 }
 

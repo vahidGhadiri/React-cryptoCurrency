@@ -15,6 +15,13 @@ class Actions {
         }
     }
 
+    public getCoinHistory(id: string, timeFrame: string) {
+        return {
+            type: types.GET_COIN_HISTORY,
+            data: {id, timeFrame}
+        }
+    }
+
     public setCoins(coins: CoinInterface) {
         return {
             type: types.SET_COINS,
@@ -26,6 +33,13 @@ class Actions {
         return {
             type: types.SET_COIN,
             data: coin
+        }
+    }
+
+    public setCoinHistory(history: Array<string>) {
+        return {
+            type: types.SET_COIN_HISTORY,
+            data: history
         }
     }
 

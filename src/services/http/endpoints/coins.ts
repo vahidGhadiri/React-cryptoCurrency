@@ -1,17 +1,18 @@
 import BaseApi from "../base";
+import * as urls from "../../../configs/urls"
 
 
 class CoinsServiceProvider extends BaseApi {
     constructor() {
-        super("coins");
+        super("");
     }
 
     public getCoins() {
-        return this.httpServices.get("")
+        return this.httpServices.get(urls.GET_COINS)
     }
 
-    public getCoin(id: string) {
-        return this.httpServices.get(id)
+    public getCoin(id: string): any {
+        return this.httpServices.get(urls.GET_COIN.replace('{id}', id))
     }
 }
 

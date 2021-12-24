@@ -8,9 +8,9 @@ import RootSaga from "./index.saga";
 
 
 export interface StoreInterface {
-    exchange: ExchangesInitialStateInterface
-    market: MarketsInitialStateInterface
-    coin: CoinsInitialStateInterface
+    exchanges: ExchangesInitialStateInterface
+    markets: MarketsInitialStateInterface
+    coins: CoinsInitialStateInterface
 }
 
 // @ts-ignore

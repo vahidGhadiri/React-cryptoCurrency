@@ -8,6 +8,13 @@ class Actions {
         }
     }
 
+    public getCoin(id: string) {
+        return {
+            type: types.GET_COIN,
+            data: id
+        }
+    }
+
     public setCoins(coins: CoinInterface) {
         return {
             type: types.SET_COINS,
@@ -15,9 +22,16 @@ class Actions {
         }
     }
 
+    public setCoin(coin: CoinInterface) {
+        return {
+            type: types.SET_COIN,
+            data: coin
+        }
+    }
+
     public setLoading(loading: boolean) {
         return {
-            type: "",
+            type: types.SET_LOADING,
             data: loading
         }
     }

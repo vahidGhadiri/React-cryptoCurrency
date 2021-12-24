@@ -46,5 +46,5 @@ interface NameInterface {
 
 export interface CoinsActionInterface {
     type: string
-    data: any
+    data?: any
 }

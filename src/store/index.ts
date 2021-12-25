@@ -5,12 +5,14 @@ import {ExchangesInitialStateInterface} from "../types/exchanges.type";
 import {RootReducer} from "./index.reducer";
 import {CoinsInitialStateInterface} from "../types/coins.type";
 import RootSaga from "./index.saga";
+import {StatsInitialStateInterface} from "../types/stats.type";
 
 
 export interface StoreInterface {
     exchanges: ExchangesInitialStateInterface
     markets: MarketsInitialStateInterface
     coins: CoinsInitialStateInterface
+    stats: StatsInitialStateInterface
 }
 
 // @ts-ignore

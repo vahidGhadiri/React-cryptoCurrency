@@ -6,7 +6,7 @@ export interface StatsInterface {
     "total24hVolume": number
 }
 
-export interface StateInitialStateInterface {
+export interface StatsInitialStateInterface {
     stats: StatsInterface | {},
     isLoading: boolean
 }

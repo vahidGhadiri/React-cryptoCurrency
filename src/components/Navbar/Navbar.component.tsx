@@ -1,17 +1,19 @@
 import React from "react"
-import {Avatar, Menu, Typography} from "antd";
 import {Link} from "react-router-dom"
 
-import icon from "../../assets/images/cryptocurrency.png"
+import {Avatar, Menu} from "antd";
 import {BulbOutlined, FundOutlined, HomeOutlined, MoneyCollectOutlined} from "@ant-design/icons";
+
+import icon from "../../assets/images/cryptocurrency.png"
+import {Logo, LogoContainer, NavbarContainer} from "./Navbar.style";
 
 
 const Navbar: React.FC = (): JSX.Element => {
     return (
-        <div className="nav-container">
-            <div className="logo-container">
+        <NavbarContainer>
+            <LogoContainer>
                 <Avatar src={icon} size="large"/>
-                <Typography.Title level={2} className="logo"><Link to={"/"}> </Link></Typography.Title>
+                <Logo level={2}><Link to={"/"}> </Link></Logo>
 
                 <Menu theme="dark">
                     <Menu.Item icon={<HomeOutlined/>}>
@@ -28,8 +30,8 @@ const Navbar: React.FC = (): JSX.Element => {
                     </Menu.Item>
                 </Menu>
 
-            </div>
-        </div>
+            </LogoContainer>
+        </NavbarContainer>
     )
 }
 

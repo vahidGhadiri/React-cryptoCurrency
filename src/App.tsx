@@ -1,11 +1,11 @@
 import React from "react"
 import {Route, Switch} from "react-router";
-import {Layout, Space, Typography} from "antd";
+import {Layout} from "antd";
 
 import {Cryptocurrencies, CryptoDetail, Exchanges, Home, Navbar, News} from "./components"
 
-import "./App.css"
-import {Link} from "react-router-dom";
+import "./assets/styles/main.css"
+import Footer from "./components/Footer/Footer.component";
 
 const App: React.FC = () => {
     return (
@@ -25,17 +25,7 @@ const App: React.FC = () => {
                         </Switch>
                     </div>
                 </Layout>
-                <div className="footer">
-                    <Typography.Title level={5} style={{color: "#fff", textAlign: "center"}}>
-                        Cryptoverse <br/>
-                        All rights reserved
-                    </Typography.Title>
-                    <Space>
-                        <Link to="/">Home</Link>
-                        <Link to="/exchanges">Exchanges</Link>
-                        <Link to="/news ">News</Link>
-                    </Space>
-                </div>
+                <Footer/>
             </div>
         </div>
     )

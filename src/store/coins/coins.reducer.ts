@@ -1,7 +1,7 @@
-import {CoinsActionInterface, CoinsInitialStateInterface} from "../../types/coins.type";
+import {CoinsActionInterface, CoinsStateInterface} from "../../types/coins.type";
 import {SET_COIN, SET_COIN_HISTORY, SET_COINS, SET_LOADING} from "./coins.constant";
 
-const initialState: CoinsInitialStateInterface = {
+const initialState: CoinsStateInterface = {
     coins: [],
     coin: {},
     coinHistory: [],

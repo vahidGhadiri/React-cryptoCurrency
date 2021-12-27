@@ -1,7 +1,7 @@
-import {ExchangesActionInterface, ExchangesInitialStateInterface} from "../../types/exchanges.type";
+import {ExchangesActionInterface, ExchangesStateInterface} from "../../types/exchanges.type";
 import {SET_EXCHANGES, SET_LOADING} from "./exchanges.constant";
 
-const initialState: ExchangesInitialStateInterface = {
+const initialState: ExchangesStateInterface = {
     exchanges: [],
     isLoading: false,
 }

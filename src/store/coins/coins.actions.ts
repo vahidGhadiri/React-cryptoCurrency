@@ -1,10 +1,11 @@
 import * as types from "./coins.constant"
-import {CoinInterface} from "../../types/coins.type";
+import {CoinsStateInterface} from "../../types/coins.type";
 
 class Actions {
-    public getCoins() {
+    public getCoins(count: number) {
         return {
-            type: types.GET_COINS
+            type: types.GET_COINS,
+            data: count
         }
     }
 
@@ -22,14 +23,14 @@ class Actions {
         }
     }
 
-    public setCoins(coins: CoinInterface) {
+    public setCoins(coins: Pick<CoinsStateInterface, "coins">) {
         return {
             type: types.SET_COINS,
             data: coins
         }
     }
 
-    public setCoin(coin: CoinInterface) {
+    public setCoin(coin: Pick<CoinsStateInterface, "coin">) {
         return {
             type: types.SET_COIN,
             data: coin

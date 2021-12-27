@@ -1,4 +1,4 @@
-export interface ExchangesInterface {
+export interface ExchangeInterface {
     id: number
     uuid: string
     name: string
@@ -14,8 +14,8 @@ export interface ExchangesInterface {
 }
 
 
-export interface ExchangesInitialStateInterface {
-    exchanges: Array<ExchangesInterface>
+export interface ExchangesStateInterface {
+    exchanges: Array<ExchangeInterface>
     isLoading: boolean
 }
 

@@ -1,7 +1,7 @@
 import {SET_LOADING, SET_STATS} from "./stats.constant";
-import {StatsActionInterface, StatsInitialStateInterface} from "../../types/stats.type";
+import {StatsActionInterface, StatsStateInterface} from "../../types/stats.type";
 
-const initialState: StatsInitialStateInterface = {
+const initialState: StatsStateInterface = {
     stats: {},
     isLoading: false
 }

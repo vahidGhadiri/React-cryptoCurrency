@@ -1,5 +1,5 @@
 import * as types from "./stats.constant"
-import {StatsInterface} from "../../types/stats.type";
+import {StatsStateInterface} from "../../types/stats.type";
 
 class Actions {
     public getStats() {
@@ -8,7 +8,7 @@ class Actions {
         }
     }
 
-    public setStats(stats: StatsInterface) {
+    public setStats(stats: Pick<StatsStateInterface, "stats">) {
         return {
             type: types.SET_STATS,
             data: stats

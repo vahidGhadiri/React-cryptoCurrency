@@ -17,7 +17,7 @@ const handleTitleKind = (kind: Pick<PropsInterface, "kind">) => {
 }
 
 
-export const Container = styled(Typography.Title)`
+export const TextContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

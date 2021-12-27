@@ -1,18 +1,18 @@
 import {applyMiddleware, compose, createStore} from "redux";
 import createSagaMiddleware from "redux-saga";
-import {MarketsInitialStateInterface} from "../types/markets.type";
-import {ExchangesInitialStateInterface} from "../types/exchanges.type";
 import {RootReducer} from "./index.reducer";
-import {CoinsInitialStateInterface} from "../types/coins.type";
 import RootSaga from "./index.saga";
-import {StatsInitialStateInterface} from "../types/stats.type";
+import {ExchangesStateInterface} from "../types/exchanges.type";
+import {StatsStateInterface} from "../types/stats.type";
+import {MarketsStateInterface} from "../types/markets.type";
+import {CoinsStateInterface} from "../types/coins.type";
 
 
 export interface StoreInterface {
-    exchanges: ExchangesInitialStateInterface
-    markets: MarketsInitialStateInterface
-    coins: CoinsInitialStateInterface
-    stats: StatsInitialStateInterface
+    exchanges: ExchangesStateInterface
+    markets: MarketsStateInterface
+    coins: CoinsStateInterface
+    stats: StatsStateInterface
 }
 
 // @ts-ignore

@@ -1,7 +1,7 @@
-import {MarketsActionInterface, MarketsInitialStateInterface} from "../../types/markets.type";
+import {MarketsActionInterface, MarketsStateInterface} from "../../types/markets.type";
 import {SET_LOADING, SET_MARKETS} from "./markets.constant";
 
-const initialState: MarketsInitialStateInterface = {
+const initialState: MarketsStateInterface = {
     markets: [],
     isLoading: false,
 }

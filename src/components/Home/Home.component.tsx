@@ -7,9 +7,9 @@ import millify from "millify";
 
 import {Col, Row, Statistic} from "antd";
 import statsActions from "../../store/stats/stats.action";
-import {Container, Title} from "./Home.style";
+import {TextContainer, Title} from "./Home.style";
 
-import {Cryptocurrencies} from "../index";
+import {Cryptocurrencies, News} from "../index";
 
 
 const Home: React.FC = (): JSX.Element => {
@@ -34,11 +34,17 @@ const Home: React.FC = (): JSX.Element => {
                 <Col span={12}><Statistic title="Total Markets" value={millify(totalMarkets ? totalMarkets : 0)}/></Col>
             </Row>
 
-            <Container>
+            <TextContainer>
                 <Title level={3} kind="title">Top 10 Cryptocurrencies in the world</Title>
                 <Title level={5} kind="subtitle"><Link to="/cryptocurrencies"> Show More</Link></Title>
-            </Container>
-            <Cryptocurrencies/>
+            </TextContainer>
+            <Cryptocurrencies simplified/>
+
+            <TextContainer>
+                <Title level={3} kind="title">Latest Crypto News</Title>
+                <Title level={5} kind="subtitle"><Link to="/news"> Show More</Link></Title>
+            </TextContainer>
+            <News/>
         </>
     )
 }

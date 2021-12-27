@@ -1,4 +1,4 @@
-export interface StatsInterface {
+export interface StatInterface {
     "totalCoins": number
     "totalMarkets": number
     "totalExchanges": number
@@ -6,8 +6,8 @@ export interface StatsInterface {
     "total24hVolume": number
 }
 
-export interface StatsInitialStateInterface {
-    stats: StatsInterface | {},
+export interface StatsStateInterface {
+    stats: StatInterface | {},
     isLoading: boolean
 }
 

@@ -33,7 +33,7 @@ export interface CoinInterface {
     "penalty": boolean
 }
 
-export interface CoinsInitialStateInterface {
+export interface CoinsStateInterface {
     coins: Array<CoinInterface>
     coin: CoinInterface | {}
     coinHistory: Array<string>

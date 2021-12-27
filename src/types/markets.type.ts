@@ -1,4 +1,4 @@
-export interface MarketsType {
+export interface MarketInterface {
     id: number
     uuid: string
     rank: number
@@ -15,8 +15,8 @@ export interface MarketsType {
     volume: number
 }
 
-export interface MarketsInitialStateInterface {
-    markets: Array<MarketsType>
+export interface MarketsStateInterface {
+    markets: Array<MarketInterface>
     isLoading: boolean
 }
 

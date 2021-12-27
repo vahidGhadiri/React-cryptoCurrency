@@ -1,5 +1,5 @@
 import * as types from "./markets.constant"
-import {MarketsType} from "../../types/markets.type";
+import {MarketsStateInterface} from "../../types/markets.type";
 
 
 class Actions {
@@ -9,7 +9,7 @@ class Actions {
         }
     }
 
-    public setMarkets(markets: MarketsType) {
+    public setMarkets(markets: Pick<MarketsStateInterface, "markets">) {
         return {
             type: types.SET_MARKETS,
             data: markets

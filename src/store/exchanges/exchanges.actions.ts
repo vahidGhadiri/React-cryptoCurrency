@@ -1,5 +1,5 @@
 import * as types from "./exchanges.constant"
-import {ExchangesInterface} from "../../types/exchanges.type";
+import {ExchangesStateInterface} from "../../types/exchanges.type";
 
 
 class Actions {
@@ -8,7 +8,8 @@ class Actions {
             type: types.GET_EXCHANGES,
         }
     }
-    public setExchanges(exchanges: ExchangesInterface) {
+
+    public setExchanges(exchanges: Pick<ExchangesStateInterface, 'exchanges'>) {
         return {
             type: types.SET_EXCHANGES,
             data: exchanges

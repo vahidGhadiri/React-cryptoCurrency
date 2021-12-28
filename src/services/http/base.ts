@@ -1,4 +1,4 @@
-import axios, {AxiosInstance} from "axios";
+import axios, {AxiosError, AxiosInstance} from "axios";
 import {toast} from "react-toastify";
 
 
@@ -23,7 +23,7 @@ abstract class BaseApi {
     private requestInterceptors = () => {
         this.httpServices.interceptors.request.use(
             (request) => request,
-            (error) => console.log(error)
+            (error: AxiosError) => error
         )
     }
 

@@ -6,10 +6,11 @@ import coinsService from "../../services/http/endpoints/coins";
 import {GET_COIN, GET_COIN_HISTORY, GET_COINS} from "./coins.constant";
 
 
-export function* getCoins() {
+export function* getCoins(action: CoinsActionInterface) {
+    const query = `?limit=${action.data}`
     yield put(coinsActions.setLoading(true))
     try {
-        const response: CoinsActionInterface = yield call(() => coinsService.getCoins())
+        const response: CoinsActionInterface = yield call(() => coinsService.getCoins(query))
         const {coins} = response.data.data
         yield put(coinsActions.setCoins(coins))
     } finally {

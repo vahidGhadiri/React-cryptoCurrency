@@ -2,7 +2,7 @@ import * as types from "./coins.constant"
 import {CoinsStateInterface} from "../../types/coins.type";
 
 class Actions {
-    public getCoins(count: number) {
+    public getCoins(count: string) {
         return {
             type: types.GET_COINS,
             data: count

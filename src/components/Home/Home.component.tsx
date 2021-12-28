@@ -10,6 +10,7 @@ import statsActions from "../../store/stats/stats.action";
 import {TextContainer, Title} from "./Home.style";
 
 import {Cryptocurrencies, News} from "../index";
+import {ROUTE_NAME} from "../../configs/constants";
 
 
 const Home: React.FC = (): JSX.Element => {
@@ -36,13 +37,13 @@ const Home: React.FC = (): JSX.Element => {
 
             <TextContainer>
                 <Title level={3} kind="title">Top 10 Cryptocurrencies in the world</Title>
-                <Title level={5} kind="subtitle"><Link to="/cryptocurrencies"> Show More</Link></Title>
+                <Title level={5} kind="subtitle"><Link to={ROUTE_NAME.CRYPTOCURRENCIES}> Show More</Link></Title>
             </TextContainer>
-            <Cryptocurrencies simplified/>
+            <Cryptocurrencies isMinContent={true}/>
 
             <TextContainer>
                 <Title level={3} kind="title">Latest Crypto News</Title>
-                <Title level={5} kind="subtitle"><Link to="/news"> Show More</Link></Title>
+                <Title level={5} kind="subtitle"><Link to={ROUTE_NAME.NEWS}> Show More</Link></Title>
             </TextContainer>
             <News/>
         </>

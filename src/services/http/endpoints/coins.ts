@@ -7,8 +7,8 @@ class CoinsServiceProvider extends BaseApi {
         super("");
     }
 
-    public getCoins() {
-        return this.httpServices.get(urls.GET_COINS)
+    public getCoins(count: string) {
+        return this.httpServices.get(`${urls.GET_COINS}${count}`)
     }
 
     public getCoin(id: string) {

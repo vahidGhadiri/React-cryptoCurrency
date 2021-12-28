@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 
 import {Space, Typography} from "antd";
 import {FooterContainer} from "./Footer.style";
+import {ROUTE_NAME} from "../../configs/constants";
 
 
 export const Footer: React.FC = (): JSX.Element => {
@@ -13,9 +14,9 @@ export const Footer: React.FC = (): JSX.Element => {
                 Cryptoverse <br/> All rights reserved
             </Title>
             <Space>
-                <Link to="/">Home</Link>
-                <Link to="/exchanges">Exchanges</Link>
-                <Link to="/news ">News</Link>
+                <Link to={ROUTE_NAME.HOME}>Home</Link>
+                <Link to={ROUTE_NAME.EXCHANGES}>Exchanges</Link>
+                <Link to={ROUTE_NAME.NEWS}>News</Link>
             </Space>
         </FooterContainer>
     )

@@ -1,0 +1,20 @@
+{
+  "name": "react-crypto progressive web app",
+  "short_name": "react-app pwa",
+  "dir": "ltr",
+  "description": "***",
+  "lang": "en-US",
+  "orientation": "portrait",
+  "display": "standAlone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "start_url": "/",
+  "scope": ".",
+  "icons": [
+    {
+      "src": "../src/assets/icons/bitcoin.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}

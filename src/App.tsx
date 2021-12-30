@@ -15,7 +15,7 @@ const App: React.FC = () => {
             </div>
             <div className="main">
                 <Layout>
-                    <div className="routes ">
+                    <div className="routes">
                         <Switch>
                             <Route path='/' component={Home} exact/>
                             <Route path='/exchanges' component={Exchanges} exact/>

@@ -17,16 +17,16 @@ const Navbar: React.FC = (): JSX.Element => {
                 <Logo level={2}><Link to={ROUTE_NAME.HOME}> </Link></Logo>
 
                 <Menu theme="dark">
-                    <Menu.Item icon={<HomeOutlined/>}>
+                    <Menu.Item icon={<HomeOutlined/>} key="home">
                         <Link to={ROUTE_NAME.HOME}>Home</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<FundOutlined/>}>
+                    <Menu.Item icon={<FundOutlined/>} key="cryptocurrencies">
                         <Link to={ROUTE_NAME.CRYPTOCURRENCIES}>CryptoCurrencies</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<MoneyCollectOutlined/>}>
+                    <Menu.Item icon={<MoneyCollectOutlined/>} key="exchanges">
                         <Link to={ROUTE_NAME.EXCHANGES}>Exchanges</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<BulbOutlined/>}>
+                    <Menu.Item icon={<BulbOutlined/>} key="news">
                         <Link to={ROUTE_NAME.NEWS}>News</Link>
                     </Menu.Item>
                 </Menu>

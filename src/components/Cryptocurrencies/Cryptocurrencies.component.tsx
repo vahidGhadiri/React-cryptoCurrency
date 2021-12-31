@@ -22,7 +22,7 @@ const Cryptocurrencies: React.FC<PropsInterface> = ({isMinimized}): JSX.Element 
 
     const dispatch = useDispatch()
     const [data, setData] = useState<Array<CoinInterface>>([])
-    const [isEmpty, setIsEmpty] = useState(false)
+    const [isEmpty, setIsEmpty] = useState<boolean>(false)
     const cryptos = useSelector((state: StoreInterface) => state?.coins?.coins)
     const isLoading = useSelector((state: StoreInterface) => state?.coins?.isLoading)
 

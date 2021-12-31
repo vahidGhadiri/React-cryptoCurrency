@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react"
+import React, {useEffect, useState} from "react"
 import {useDispatch, useSelector} from "react-redux"
 
 import {StoreInterface} from "../../store";
@@ -20,10 +20,8 @@ interface PropsInterface {
 const Cryptocurrencies: React.FC<PropsInterface> = ({isMinimized}): JSX.Element => {
     const count = isMinimized ? "8" : "100"
 
-
     const dispatch = useDispatch()
-    const searchRef = useRef()
-    const [data, setData] = useState([])
+    const [data, setData] = useState<Array<CoinInterface>>([])
     const [isEmpty, setIsEmpty] = useState(false)
     const cryptos = useSelector((state: StoreInterface) => state?.coins?.coins)
     const isLoading = useSelector((state: StoreInterface) => state?.coins?.isLoading)
@@ -32,9 +30,8 @@ const Cryptocurrencies: React.FC<PropsInterface> = ({isMinimized}): JSX.Element 
         dispatch(coinsActions.getCoins(count))
     }, [dispatch, count])
 
-
     const searchCurrencies = (currency: string) => {
-        const filteredData: any = cryptos?.filter(item => item.name.toLowerCase().startsWith(currency.toLowerCase()))
+        const filteredData: Array<CoinInterface> = cryptos?.filter(item => item.name.toLowerCase().startsWith(currency.toLowerCase()))
         filteredData.length === 0 ? setIsEmpty(true) : setIsEmpty(false)
         setData(filteredData)
     }

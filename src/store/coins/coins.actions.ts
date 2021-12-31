@@ -23,7 +23,7 @@ class Actions {
         }
     }
 
-    public setCoins(coins: Pick<CoinsStateInterface, "coins">) {
+    public setCoins(coins: Pick<CoinsStateInterface, "coins"> | {}) {
         return {
             type: types.SET_COINS,
             data: coins

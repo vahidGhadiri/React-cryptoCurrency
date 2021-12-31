@@ -53,7 +53,7 @@ const Home: React.FC = (): JSX.Element => {
                 <Title level={3} kind="title">Top 10 Cryptocurrencies in the world</Title>
                 <Title level={5} kind="subtitle"><Link to={ROUTE_NAME.CRYPTOCURRENCIES}> Show More</Link></Title>
             </TextContainer>
-            <Cryptocurrencies isMinContent={true}/>
+            <Cryptocurrencies isMinimized={true}/>
 
             <TextContainer>
                 <Title level={3} kind="title">Latest Crypto News</Title>

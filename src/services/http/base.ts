@@ -2,6 +2,8 @@ import axios, {AxiosError, AxiosInstance} from "axios";
 import {toast} from "react-toastify";
 
 
+const {REACT_APP_CURRENCY_BASE_URL, REACT_APP_NEWS_BASE_URL} = process.env
+
 abstract class BaseApi {
     protected httpServices: AxiosInstance
 
@@ -34,7 +36,6 @@ abstract class BaseApi {
                 toast.warn(error.message, {position: toast.POSITION.BOTTOM_LEFT})
             })
     }
-
 }
 
 export default BaseApi

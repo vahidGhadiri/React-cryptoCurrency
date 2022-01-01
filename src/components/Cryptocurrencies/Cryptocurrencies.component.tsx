@@ -40,6 +40,15 @@ const Cryptocurrencies: React.FC<PropsInterface> = ({isMinimized}): JSX.Element 
 
     if (isLoading) return <Spinner/>
 
+
+    //PROXY_PATTERN_TEST
+    const person = {
+        name: "vahid",
+        lastName: "ghadiri",
+        age: 30,
+        job: "front-end developer"
+    }
+
     return (
         <>
             {!isMinimized &&

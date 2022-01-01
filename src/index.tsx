@@ -25,7 +25,7 @@ const rootElement = document.getElementById("root")
 
 const callBack = async () => {
     if (isServiceWorkerAvailable()) {
-        navigator?.serviceWorker.register("/serviceWorker.ts", {scope: "."})
+        navigator?.serviceWorker.register("../serviceWorker.ts")
             .then(response => console.log("response", response))
             .catch(error => console.log("err", error))
     } else {

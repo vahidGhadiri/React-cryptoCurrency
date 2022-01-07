@@ -4,7 +4,7 @@ import * as urls from "../../../configs/urls"
 
 class CoinsServiceProvider extends BaseApi {
     constructor() {
-        super("");
+        super();
     }
 
     public getCoins(count: string) {

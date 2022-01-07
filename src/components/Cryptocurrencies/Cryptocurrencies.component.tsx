@@ -41,13 +41,6 @@ const Cryptocurrencies: React.FC<PropsInterface> = ({isMinimized}): JSX.Element 
     if (isLoading) return <Spinner/>
 
 
-    //PROXY_PATTERN_TEST
-    const person = {
-        name: "vahid",
-        lastName: "ghadiri",
-        age: 30,
-        job: "front-end developer"
-    }
 
     return (
         <>
@@ -56,8 +49,8 @@ const Cryptocurrencies: React.FC<PropsInterface> = ({isMinimized}): JSX.Element 
 
             {isEmpty ? <div>There is nothing to show</div> :
                 <CardContainer gutter={[32, 32]}>
-                    {handleData().map((currency: CoinInterface) => (
-                        <CardWrapper xs={24} sm={12} lg={6} key={currency?.id}>
+                    {handleData().map((currency: CoinInterface, index: number) => (
+                        <CardWrapper xs={24} sm={12} lg={6} key={index}>
                             <Link to={`${ROUTE_NAME.CRYPTO}/${currency?.id}`}>
                                 <Card title={`${currency?.rank}.${currency?.name}`}
                                       extra={<CardImage src={currency?.iconUrl} alt={currency?.name}/>} hoverable>

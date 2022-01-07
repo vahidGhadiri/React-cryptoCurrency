@@ -3,7 +3,7 @@ import * as urls from "../../../configs/urls"
 
 class ExchangesServiceProvider extends BaseApi {
     constructor() {
-        super("");
+        super();
     }
 
     public getExchanges() {

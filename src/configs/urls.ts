@@ -13,3 +13,5 @@ export const GET_COIN_HISTORY = "/coin/{id}/history/{timeFrame}"
 //Stats modules
 export const GET_STATS = "/stats"
 
+//News modules
+export const GET_NEWS = "/news"

@@ -1,12 +1,13 @@
 import BaseApi from "../base";
+import {GET_NEWS} from "../../../configs/urls";
 
 class NewsServiceProvider extends BaseApi {
     constructor() {
-        super("");
+        super("news");
     }
 
     public getNews() {
-        return this.httpServices.get("")
+        return this.httpServices.get(GET_NEWS)
     }
 }
 

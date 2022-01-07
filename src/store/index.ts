@@ -6,6 +6,7 @@ import {ExchangesStateInterface} from "../types/exchanges.type";
 import {StatsStateInterface} from "../types/stats.type";
 import {MarketsStateInterface} from "../types/markets.type";
 import {CoinsStateInterface} from "../types/coins.type";
+import {NewsStateInterface} from "../types/news.type";
 
 
 export interface StoreInterface {
@@ -13,6 +14,7 @@ export interface StoreInterface {
     markets: MarketsStateInterface
     coins: CoinsStateInterface
     stats: StatsStateInterface
+    news: NewsStateInterface
 }
 
 // @ts-ignore

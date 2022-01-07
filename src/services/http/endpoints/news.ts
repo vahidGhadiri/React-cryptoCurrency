@@ -6,8 +6,8 @@ class NewsServiceProvider extends BaseApi {
         super("news");
     }
 
-    public getNews() {
-        return this.httpServices.get(GET_NEWS)
+    public getNews(count: string) {
+        return this.httpServices.get(`${GET_NEWS.replace('{count}', count)}`)
     }
 }
 

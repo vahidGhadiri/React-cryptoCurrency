@@ -14,4 +14,4 @@ export const GET_COIN_HISTORY = "/coin/{id}/history/{timeFrame}"
 export const GET_STATS = "/stats"
 
 //News modules
-export const GET_NEWS = "/news"
+export const GET_NEWS = "news/search?q=cryptoNews&safeSearch=Off&textFormat=Raw&freshness=Day&count={count}"

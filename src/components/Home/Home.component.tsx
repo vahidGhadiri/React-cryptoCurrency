@@ -13,7 +13,6 @@ import {Cryptocurrencies, News} from "../index";
 import {ROUTE_NAME} from "../../configs/constants";
 import {StoreInterface} from "../../store";
 import {Spinner} from "../Cryptocurrencies/Cryptocurrenices.style";
-import newsActions from "../../store/news/news.action";
 
 
 const Home: React.FC = (): JSX.Element => {
@@ -27,7 +26,6 @@ const Home: React.FC = (): JSX.Element => {
 
     useEffect(() => {
         dispatch(statsActions.getStats())
-        dispatch(newsActions.getNews())
     }, [dispatch])
 
 
@@ -60,7 +58,7 @@ const Home: React.FC = (): JSX.Element => {
                 <Title level={3} kind="title">Latest Crypto News</Title>
                 <Title level={5} kind="subtitle"><Link to={ROUTE_NAME.NEWS}> Show More</Link></Title>
             </TextContainer>
-            <News/>
+            <News isMinimized={true}/>
         </>
     )
 }

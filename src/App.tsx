@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer.component";
 const App: React.FC = () => {
     return (
         <div className="app">
+
             <div className="navbar">
                 <Navbar/>
             </div>

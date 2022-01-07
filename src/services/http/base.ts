@@ -2,19 +2,16 @@ import axios, {AxiosError, AxiosInstance} from "axios";
 import {toast} from "react-toastify";
 
 
-const {REACT_APP_CURRENCY_BASE_URL, REACT_APP_NEWS_BASE_URL} = process.env
-
 abstract class BaseApi {
     protected httpServices: AxiosInstance
 
     protected constructor(suffix?: string) {
         this.httpServices = axios.create({
-            baseURL: `https://coinranking1.p.rapidapi.com/${suffix ? suffix : ""}`,
             timeout: 10000,
+            baseURL: 'https://api.coinranking.com/v2',
             headers: {
-                'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-                'x-rapidapi-key': '69a238c52cmshd0000458a91563ep1cb71cjsn5b681975faa3',
-            },
+                "x-access-token": "coinranking05e5321829b78c0f9c2aae1e44b2b897c5d46c41d28d1211",
+            }
         })
 
         this.requestInterceptors()

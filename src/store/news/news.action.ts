@@ -3,10 +3,10 @@ import {NewsInterface} from "../../types/news.type";
 
 class Actions {
 
-    public getNews(count: string) {
+    public getNews(category: string, count: string) {
         return {
             type: types.GET_NEWS,
-            data: count
+            data: {category, count}
         }
     }
 

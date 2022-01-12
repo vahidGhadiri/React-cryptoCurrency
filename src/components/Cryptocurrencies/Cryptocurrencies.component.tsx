@@ -10,6 +10,7 @@ import {ROUTE_NAME} from "../../configs/constants";
 import millify from "millify";
 import {Card} from "antd";
 import {Link} from "react-router-dom";
+import useCopyToClipboard from "../../hook/copyToClipboard";
 
 
 interface PropsInterface {
@@ -23,8 +24,10 @@ const Cryptocurrencies: React.FC<PropsInterface> = ({isMinimized}): JSX.Element 
     const dispatch = useDispatch()
     const [data, setData] = useState<Array<CoinInterface>>([])
     const [isEmpty, setIsEmpty] = useState<boolean>(false)
+    const [value, setValue] = useCopyToClipboard()
     const cryptos = useSelector((state: StoreInterface) => state?.coins?.coins)
     const isLoading = useSelector((state: StoreInterface) => state?.coins?.isLoading)
+
 
     useEffect(() => {
         dispatch(coinsActions.getCoins(count))
@@ -39,7 +42,6 @@ const Cryptocurrencies: React.FC<PropsInterface> = ({isMinimized}): JSX.Element 
     const handleData = () => data.length === 0 ? cryptos : data;
 
     if (isLoading) return <Spinner/>
-
 
 
     return (

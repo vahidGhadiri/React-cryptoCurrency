@@ -23,11 +23,6 @@ const AppCompact = (
 const rootElement = document.getElementById("root")
 
 
-ReactDOM.render(AppCompact, rootElement, ()=>{
-    console.log(
-        process.env["REACT_APP_CURRENCY_BASE_URL"],
-        process.env["REACT_APP_NEWS_BASE_URL"],
-    )
-})
+ReactDOM.render(AppCompact, rootElement)
 
 

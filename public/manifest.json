@@ -1,11 +1,11 @@
 {
   "name": "react-crypto progressive web app",
-  "short_name": "crypto pwa",
+  "short_name": "crypto-pwa",
   "dir": "ltr",
   "description": "***",
   "lang": "en-US",
   "orientation": "portrait",
-  "display": "standAlone",
+  "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#fff",
   "scope": "/",

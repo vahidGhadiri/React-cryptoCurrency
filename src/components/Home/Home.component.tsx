@@ -35,16 +35,11 @@ const Home: React.FC = (): JSX.Element => {
             {statsLoading ?
                 <Spinner/> :
                 <Row>
-                    <Col span={12}><Statistic title="Total Cryptocurrencies"
-                                              value={millify(totalCoins ? totalCoins : 0)}/></Col>
-                    <Col span={12}><Statistic title="Total Exchanges"
-                                              value={millify(totalExchanges ? totalExchanges : 0)}/></Col>
-                    <Col span={12}><Statistic title="Total Market Cap"
-                                              value={millify(totalMarketCap ? totalMarketCap : 0)}/></Col>
-                    <Col span={12}><Statistic title="Total 24h Volume"
-                                              value={millify(total24hVolume ? total24hVolume : 0)}/></Col>
-                    <Col span={12}><Statistic title="Total Markets"
-                                              value={millify(totalMarkets ? totalMarkets : 0)}/></Col>
+                    <Col span={12}><Statistic title="Total Cryptocurrencies" value={millify(totalCoins ? totalCoins : 0)}/></Col>
+                    <Col span={12}><Statistic title="Total Exchanges" value={millify(totalExchanges ? totalExchanges : 0)}/></Col>
+                    <Col span={12}><Statistic title="Total Market Cap" value={millify(totalMarketCap ? totalMarketCap : 0)}/></Col>
+                    <Col span={12}><Statistic title="Total 24h Volume" value={millify(total24hVolume ? total24hVolume : 0)}/></Col>
+                    <Col span={12}><Statistic title="Total Markets" value={millify(totalMarkets ? totalMarkets : 0)}/></Col>
                 </Row>
             }
 

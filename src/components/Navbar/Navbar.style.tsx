@@ -15,9 +15,6 @@ export const NavbarContainer = styled.div`
     z-index: 100;
     background-color: var(--bgSecondary);
   }
-
-
-
 `
 
 export const LogoContainer = styled.div`
@@ -36,10 +33,3 @@ export const Logo = styled(Typography.Title)`
     color: white;
   }
 `
-// .nav-container {
-// height: 8vh;
-// position: fixed;
-// width: 100%;
-// z-index: 100;
-// background-color: var(--bgSecondary);
-// }

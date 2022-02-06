@@ -6,7 +6,7 @@
   "lang": "en-US",
   "orientation": "portrait",
   "display": "standalone",
-  "background_color": "#fff",
+  "background_color": "#black",
   "theme_color": "#fff",
   "scope": "/",
   "start_url": "./",

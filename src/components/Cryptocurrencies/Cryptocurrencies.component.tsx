@@ -10,7 +10,7 @@ import {ROUTE_NAME} from "../../configs/constants";
 import millify from "millify";
 import {Card} from "antd";
 import {Link} from "react-router-dom";
-import useCopyToClipboard from "../../hook/copyToClipboard";
+import useCopyToClipboard from "../../hook/useCopyToClipboard";
 
 
 interface PropsInterface {

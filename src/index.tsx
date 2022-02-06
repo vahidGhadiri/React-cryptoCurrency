@@ -9,6 +9,8 @@ import {index} from "./store";
 
 import 'react-toastify/dist/ReactToastify.css';
 import "antd/dist/antd.css"
+import reportWebVitals from "./reportWebVitals";
+import {register, unregister} from "./service-worker.registration";
 
 
 const AppCompact = (
@@ -24,5 +26,13 @@ const rootElement = document.getElementById("root")
 
 
 ReactDOM.render(AppCompact, rootElement)
+
+if(process.env.NODE_ENV === "production") {
+    register();
+}else {
+    unregister()
+}
+
+reportWebVitals()
 
 
